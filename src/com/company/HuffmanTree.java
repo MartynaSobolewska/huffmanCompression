@@ -4,6 +4,10 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.*;
 
+/**
+ * A Class representing Huffman tree. It contains root node that is connected to other Node objects.
+ * Contains methods to traverse through the tree and save corresponding binary codes.
+ */
 public class HuffmanTree {
     private Node root;
     private List<Node> nodes = new ArrayList<>();
@@ -88,6 +92,12 @@ public class HuffmanTree {
         setCodes(currentRoot.getRightChild(), code + 1);
     }
 
+    /**
+     * Saves a .txt file containing a map of characters and corresponding codes in a JSON-like form.
+     * The file is saved in resouces/trees directory.
+     * It can be later used by decompression and compression functions in [Compressor.java]
+     * @param fileName name of file that codes will be saved in (without '.txt')
+     */
     public void saveTreeCodes(String fileName) {
         // convert a map containing characters and corresponding codes to JSON
         String json = "";

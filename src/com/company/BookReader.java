@@ -9,7 +9,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 /**
- * class containing methods allowing to read chosen books from the resources directory
+ * A class containing methods allowing to read chosen books from the resources directory
  */
 public class BookReader {
     /**
